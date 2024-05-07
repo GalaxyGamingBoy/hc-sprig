@@ -21,7 +21,19 @@ const session = await getSession(Astro.cookies)
 
 const filename = Astro.params.filename ?? ''
 const gameContentPath = path.resolve(__dirname, `../../../games/${filename}.js`)
-const code = fs.readFileSync(gameContentPath).toString()
+
+let code;
+if (!Astro.url.searchParams.has("pr")) {
+	code = fs.readFileSync(gameContentPath).toString()
+} else {
+	// Select first github pr file that ends with .js and load the raw gamefile to code
+	const filesChanged: {filename: string, raw_url: string}[] =
+		await fetch(`https://api.github.com/repos/hackclub/sprig/pulls/${Astro.url.searchParams.get("pr")}/files`)
+		.then(data => data.json())
+	const prGame = filesChanged.find((file) => file.filename.endsWith(".js"));
+	code = await fetch(prGame?.raw_url || "").then(data => data.text())
+}
+
 if (code == null) {
 	return Astro.redirect('/404', 302)
 }
