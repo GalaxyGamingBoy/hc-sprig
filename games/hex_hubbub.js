@@ -1,5 +1,8 @@
 /*
 @title: hex_hubbub
+@tags: ['thematic-puzzle']
+@img: ""
+@addedOn: 2023-01-28
 @author: ajs256
 */
 
@@ -397,7 +400,7 @@ var current = 0b0000;
 function renderSegments(num) {
   let goal = goals[goalI];
 
-  console.log(goal);
+  // console.log(goal);
   
   // a: top
   clearTile(2, 0);

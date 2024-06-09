@@ -1,5 +1,8 @@
 /*
 @title: color_patterns
+@tags: ['logic']
+@img: ""
+@addedOn: 2022-07-14
 @author: brian
 
 Instructions:
@@ -162,7 +165,7 @@ onInput("k", _ => {
 
 afterInput(_ => {
   if(checkResult()){
-      console.log('done');
+      // console.log('done');
       nextLevel();
   } 
 })

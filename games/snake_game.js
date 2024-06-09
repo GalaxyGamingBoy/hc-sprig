@@ -1,5 +1,8 @@
 /*
 @title: snake_game
+@tags: ['classic']
+@img: ""
+@addedOn: 2022-09-13
 @author: souvikpal2000
 */
 
@@ -318,7 +321,7 @@ onInput("s", () => {
     keyPressed = "s";
   }
 });
-console.log(keyPressed);
+// console.log(keyPressed);
 
 const resetGame = () => {
   keyPressed = "";

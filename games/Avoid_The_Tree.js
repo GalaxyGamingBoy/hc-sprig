@@ -1,5 +1,8 @@
 /*
 @title: Avoid_The_Tree
+@tags: ['endless']
+@img: ""
+@addedOn: 2023-01-05
 @author: Samarth Verulkar
 
 References and inspirations:
@@ -182,7 +185,7 @@ function gameLoop() {
 
 function lost() {
   gameOver = true;
-  console.log("You lost");
+  // console.log("You lost");
   setMap(map`
 ssssss
 ssssss

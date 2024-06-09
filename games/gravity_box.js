@@ -1,5 +1,8 @@
 /*
 @title: Gravity Box
+@tags: []
+@img: ""
+@addedOn: 2023-10-18
 @author: Josias Aurel
 */
 
@@ -228,7 +231,7 @@ afterInput(() => {
   */
   
   
-  console.log("doesn't really do anything that cool");
+  // console.log("doesn't really do anything that cool");
 })
 
 // gravity stuff

@@ -1,5 +1,8 @@
 /*
 @title: the_invisible_man
+@tags: ['puzzle-score']
+@img: ""
+@addedOn: 2022-11-14
 @author: Gárdonyi Bálint (Valentine)
 MOVEMENT: WASD
 In this game, you have to collect coins. The catch? You are invisible! (the player is invisible, but it is there somewhere)
@@ -116,11 +119,11 @@ afterInput(() => {
 
 //Debug stuff, I'll leave this in in case someone playing from the browser wants it
 afterInput(() => {
-  console.log("playery "+playery);
-  console.log("playery "+playerx);
-  console.log("coinx "+coiny);
-  console.log("coinx "+coinx);
-  console.log("--------------------");
+  // console.log("playery "+playery);
+  // console.log("playery "+playerx);
+  // console.log("coinx "+coiny);
+  // console.log("coinx "+coinx);
+  // console.log("--------------------");
 })
 
 

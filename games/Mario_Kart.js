@@ -1,5 +1,8 @@
 /*
 @title: Mario_Kart
+@tags: ['endless']
+@img: ""
+@addedOn: 2023-01-13
 @author: nucleiav */
 
 let n = 0;
@@ -201,7 +204,7 @@ function gameScore() {
 
 function lost() {
   GameOver = true;
-  console.log("You lost");
+  // console.log("You lost");
   setMap(map`
 llllll
 llllll

@@ -1,5 +1,8 @@
 /*
 @title: the journey of the box[a sokoban saga] 
+@tags: ['sokoban-style']
+@img: ""
+@addedOn: 2023-04-15
 @author: Ethan Francis
 //INSTRUCTIONS
  Get all blue boxes into the holes 
@@ -269,8 +272,8 @@ afterInput(() => {
   const buttonNumber = tilesWith(button).length;
   const Coveredbuttons = tilesWith(button, box).length;
   const wallTiles = tilesWith(wall);
-  console.log("buttonNumber", buttonNumber);
-  console.log("Coveredbuttons", Coveredbuttons);
+  // console.log("buttonNumber", buttonNumber);
+  // console.log("Coveredbuttons", Coveredbuttons);
   //check level buttons
   if (level == 5) {
     if (buttonNumber === Coveredbuttons){

@@ -1,4 +1,13 @@
-/*
+
+/* 
+@title: flappysprig
+@author: Spectral
+@tags: ['classic']
+@img: ""
+@addedOn: 2023-09-10
+*/
+
+    /*
 
 Use W and Z to move up and down. It's a Flappy Bird but with a Sprig. The sprig is the same that on SprigressBar, MathR is a friend and autorised me to pick it. Go check his game!!!!
 I've just seen that there is already an Flappy Bird but ... I've passed so much time on it to stop it. I don't think i will get a sprig but, i hope it.
@@ -345,7 +354,7 @@ function resetintervals() {
     point += 1
   }
   // Show Points at the right of the screen
-  console.log(point)
+  // console.log(point)
   let pointstring = point.toString()
   clearText()
   addText(pointstring, { 
@@ -353,7 +362,7 @@ function resetintervals() {
   y: 1,
   color: color`0`
   })
-  console.log(playerx,playery)
+  // console.log(playerx,playery)
   if (getTile(playerx, playery)[1]) {
     // Make the game over screen appears
     clearText()

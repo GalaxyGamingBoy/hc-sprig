@@ -1,6 +1,9 @@
 /*
 
 @title: 9_puzzle
+@tags: ['logic']
+@img: ""
+@addedOn: 2022-07-14
 @author: brian
 
 Instructions:
@@ -112,7 +115,7 @@ onInput("k", _ => {
 })
 
 afterInput(_ => {
-  console.log(tilesWith(red,target));
+  // console.log(tilesWith(red,target));
 })
 
 const moveTileTo = (x,y) => {

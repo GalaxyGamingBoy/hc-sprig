@@ -1,4 +1,13 @@
-// Based on the game Progressbar95
+
+/* 
+@title: Sprigressbar
+@author: MathR
+@tags: ['advanced']
+@img: ""
+@addedOn: 2023-08-21
+*/
+
+    // Based on the game Progressbar95
 // Fill your bar with segments to move to the next level
 // At the end of each level you gain 5 points for each blue segment
 // Avoid red segments at all cost!
@@ -1480,7 +1489,7 @@ function check_segments(hhhh) {
             if (progress == 0) return
             progress -= 5
             getTile(bar_pos.x + Math.floor(progress/10),bar_pos.y).forEach((the) => {
-                console.log(the.type)
+                // console.log(the.type)
               if (progress % 10){
                 if (the.type == beb || the.type == beo) the.remove()
               } else {

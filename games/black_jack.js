@@ -1,5 +1,8 @@
 /*
 @title: black_jack
+@tags: ['classic']
+@img: black_jack
+@addedOn: 2022-12-21
 @author: xevaly
 
 Before the game starts, the player can adjust their bet size by pressing the "I" key to increase the bet size and the "K" key to decrease it.
@@ -585,7 +588,7 @@ function drawCard(val, num, x, y) {
 function showHand(cards, is_dealer) {
     let i = 0;
     cards.forEach(card => {
-        console.log(card);
+        // console.log(card);
         drawCard(lookup[card[0]], card.slice(1), 4 * !is_dealer + i * 2, 1 + 3 * !is_dealer);
         i++;
     })

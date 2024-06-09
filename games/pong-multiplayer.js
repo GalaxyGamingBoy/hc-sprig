@@ -1,5 +1,8 @@
 /*
 @title: pong-multiplayer
+@tags: ['multiplayer']
+@img: pong-multiplayer
+@addedOn: 2023-01-01
 @author: sean
 */
 // Sprites
@@ -232,7 +235,7 @@ setInterval(() => {
     ballX = Math.abs(ballX);
   }
   } catch(e) {
-    console.log(e)
+    // console.log(e)
   }
 }, 60)
 // Scoring

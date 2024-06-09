@@ -1,4 +1,13 @@
-let badtime = 0; // Initialize badtime
+
+/* 
+@title: mailman
+@author: Akko
+@tags: []
+@img: ""
+@addedOn: 2023-09-07
+*/
+
+    let badtime = 0; // Initialize badtime
 let eviltime = 0;
 const tunee = tune`
 500: G4~500 + E5^500,
@@ -309,7 +318,7 @@ afterInput(() => {
     // increase the current level number
     level = level + 1;
     const currentLevel = levels[level];
-    console.log(level);
+    // console.log(level);
     // make sure the level exists and if so set the map
     // otherwise, we have finished the last level, there is no level
     // after the last level
@@ -330,8 +339,8 @@ function checkHit() {
 
   if (baddamage > 0) {
     // You're being hit
-      console.log("evilHIT!");
-      console.log(evildamage);
+      // console.log("evilHIT!");
+      // console.log(evildamage);
       setMap(currentLevelMap); // Reset the current level
     }
   }
@@ -352,6 +361,6 @@ function checkHit() {
   if (badBoxDamage > 0 || evilBoxDamage > 0) {
     // You're being hit by either BADBOX or EVILBOX
     setMap(currentLevelMap); // Reset the current level
-    console.log("HIT!");
+    // console.log("HIT!");
   }
 }

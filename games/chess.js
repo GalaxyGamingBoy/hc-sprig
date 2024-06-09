@@ -1,5 +1,8 @@
 /*
 @title: Chess
+@tags: ['multiplayer', 'classic']
+@img: ""
+@addedOn: 2022-10-31
 @author: Thomas Stubblefield
 
 Controls: Use WASD to move your cursor, J to pick up a piece, and K to place it. 
@@ -2006,7 +2009,7 @@ return exports;
 const chess = new Chess();
 chess.move('e5')
 
-console.log(chess);
+// console.log(chess);
 
 
 function convertChessMove(row, col) {
@@ -3461,7 +3464,7 @@ onInput("k", () => {
     if(currentBoard == newBoard) {
     playTune(noSound)      
     } else {
-      console.log(chess.ascii())
+      // console.log(chess.ascii())
     }
   }
   if((selectedPosition != -1) && ((currentBoard != newBoard))) {
@@ -3497,7 +3500,7 @@ afterInput(() => {
     })
   }
   else if(chess.in_threefold_repetition()) {
-    console.log("MATE")
+    // console.log("MATE")
     addText("Threefold repetition", {
       color: color`2`
     })

@@ -1,4 +1,13 @@
-// entities
+
+/* 
+@title: wham
+@author: Aaman Patnaik
+@tags: ['classic']
+@img: ""
+@addedOn: 2023-09-18
+*/
+
+    // entities
 
 const tunnel = "p";
 const defeated_monster = "d";
@@ -286,7 +295,7 @@ onInput("s", () => {
   }
 
   addText(vertical_cursor.toString(), {x: 15, y: 4, color: color`3`})
-  console.log(current_screen.flat().join(""))
+  // console.log(current_screen.flat().join(""))
   const levels = [current_screen.flat().join("")];
   const currentLevel = levels[level];
   setMap(currentLevel);}

@@ -1,4 +1,13 @@
-/*
+
+/* 
+@title: The_Legend_Of_Sprig
+@author: Medieval Apple
+@tags: ['advanced']
+@img: ""
+@addedOn: 2023-10-15
+*/
+
+    /*
 Welcome to The Legend Of Sprig!
 
 Long ago there was a treasure hunter named Sprig 
@@ -2445,16 +2454,16 @@ function UnlockOtherSide(x, y, c){
   
   if(y == 1){ //Top
     nextMapY--
-    console.log("Deleteing Rooms Up Top")
+    // console.log("Deleteing Rooms Up Top")
   }else if (x == width() - 1){ //Right
     nextMapX++
-    console.log("Deleteing Rooms Too Right")
+    // console.log("Deleteing Rooms Too Right")
   }else if (y == height() - 1){ //Bottom
      nextMapY++
-    console.log("Deleteing Rooms Down Below")
+    // console.log("Deleteing Rooms Down Below")
   }else if (x == 0){ //Left
      nextMapX--
-    console.log("Deleteing Rooms Too Left")
+    // console.log("Deleteing Rooms Too Left")
   }
 
   //console.log("worldMap: " + worldX + " , " + worldY)
@@ -2482,7 +2491,7 @@ function UnlockOtherSide(x, y, c){
 }
 
 function CheckForItem(x, y){
-  console.log("CHECKING FOR ITEM")
+  // console.log("CHECKING FOR ITEM")
   //console.log(getTile(x, y)[0])
 
   //'h' = Red Key 'j' = Blue Key 'k' = yellow key
@@ -2491,7 +2500,7 @@ function CheckForItem(x, y){
 
   //heart
   if(getTile(x, y)[0]._type == 'l'){
-    console.log("GOT HEART!")
+    // console.log("GOT HEART!")
     clearTile(x,y)
     if(playerHealth + heartRecovers > 100){
       playerHealth = 100
@@ -2502,7 +2511,7 @@ function CheckForItem(x, y){
 
   //pumpkin
   else if(getTile(x, y)[0]._type == '$'){
-    console.log("GOT pumpkin!")
+    // console.log("GOT pumpkin!")
     clearTile(x,y)
     pumpkins++
     //console.log("Current pumpkins: " + pumpkins)
@@ -2512,27 +2521,27 @@ function CheckForItem(x, y){
   //Keys
 
   else if(getTile(x, y)[0]._type == 'h'){
-    console.log("RED KEY!")
+    // console.log("RED KEY!")
     redKey = true
     clearTile(x,y)
     levels[currentLevel].data.rKeyGrab = true
   }else if(getTile(x, y)[0]._type == 'j'){
-    console.log("Blue KEY!")
+    // console.log("Blue KEY!")
     blueKey = true
     clearTile(x,y)
     levels[currentLevel].data.bKeyGrab = true
   }else if(getTile(x, y)[0]._type == 'k'){
-    console.log("Yellow KEY!")
+    // console.log("Yellow KEY!")
     yellowKey = true
     clearTile(x,y)
     levels[currentLevel].data.yKeyGrab = true
   }else if(getTile(x, y)[0]._type == '['){
-    console.log("Purple KEY!")
+    // console.log("Purple KEY!")
     purpleKey = true
     clearTile(x,y)
     levels[currentLevel].data.pKeyGrab = true
   }else if(getTile(x, y)[0]._type == ']'){
-    console.log("Orange KEY!")
+    // console.log("Orange KEY!")
     orangeKey = true
     clearTile(x,y)
     levels[currentLevel].data.oKeyGrab = true
@@ -2541,7 +2550,7 @@ function CheckForItem(x, y){
   //Doors
   
   else if(getTile(x, y)[0]._type == 'd'){
-    console.log("RED Door!")
+    // console.log("RED Door!")
     if(redKey){
       var rDoors = tilesWith(rdoor)
       for (var i = 0; i < rDoors.length; i++) {
@@ -2554,7 +2563,7 @@ function CheckForItem(x, y){
       redKey = false
     }
   }else if(getTile(x, y)[0]._type == 'm'){
-    console.log("Blue Door!")
+    // console.log("Blue Door!")
     if(blueKey){
       var bDoors = tilesWith(bdoor)
       for (var i = 0; i < bDoors.length; i++) {
@@ -2567,7 +2576,7 @@ function CheckForItem(x, y){
       blueKey = false
     }
   }else if(getTile(x, y)[0]._type == 'g'){
-    console.log("Yellow Door!")
+    // console.log("Yellow Door!")
     if(yellowKey){
       var yDoors = tilesWith(ydoor)
       for (var i = 0; i < yDoors.length; i++) {
@@ -2580,7 +2589,7 @@ function CheckForItem(x, y){
       yellowKey = false
     }
   }else if(getTile(x, y)[0]._type == '{'){
-    console.log("Purple Door!")
+    // console.log("Purple Door!")
     if(purpleKey){
       var pDoors = tilesWith(pdoor)
       for (var i = 0; i < pDoors.length; i++) {
@@ -2593,7 +2602,7 @@ function CheckForItem(x, y){
       purpleKey = false
     }
   }else if(getTile(x, y)[0]._type == '}'){
-    console.log("Orange Door!")
+    // console.log("Orange Door!")
     if(orangeKey){
       var oDoors = tilesWith(odoor)
       for (var i = 0; i < oDoors.length; i++) {
@@ -3229,12 +3238,12 @@ function CheckLevelData(levelNum){
 
   //Set Player Spawn
   if(levelData.sX == 0 && levelData.sY == 0){
-    console.log("Using Map Spawn")
+    // console.log("Using Map Spawn")
   }
   else{
     clearTile(getFirst(player).x, getFirst(player).y)
     addSprite(levelData.sX, levelData.sY, player)
-    console.log("Spawn: ", levelData.sX, " : " , levelData.sY)
+    // console.log("Spawn: ", levelData.sX, " : " , levelData.sY)
   }
     
 }
@@ -3275,12 +3284,12 @@ function GameOver(){
 }
 
 function TheEnd(){
-  console.log("YOU WON!!")
+  // console.log("YOU WON!!")
   
   gameStarted = false
   playerHealth = playerTotalHealth
   for (var i = 0; i < levels.length; i++) {
-    console.log(levels[i].data)
+    // console.log(levels[i].data)
     levels[i].data = new LevelData
     levels[i].ais = [] 
     levels[i].aiLoaded = false

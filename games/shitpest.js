@@ -1,5 +1,8 @@
 /*
 @title: shitpest
+@tags: ['strategy']
+@img: ""
+@addedOn: 2022-12-24
 @author: Mason Meirs
 snwy.me
 */
@@ -249,7 +252,7 @@ function spawnEnemies() {
         addSprite(4, 0, enemy)
       break
     default:
-      console.log(chance)
+      // console.log(chance)
   }
 }
 
