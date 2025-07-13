@@ -10,6 +10,11 @@ endif()
 # has to be before project() because it makes rpi asm
 # compilation work, and project() has to be top level
 if (SPADE_TARGET STREQUAL "rpi")
+	# option(ORPHEUS_PICO "Enable Orpheus Pico build" OFF)
+	# if (ORPHEUS_PICO)
+	set(PICO_BOARD orpheus_pico)
+	# endif()
+
   include(src/rpi/pico_sdk_import.cmake)
   include(src/rpi/pico_extras_import.cmake)
 endif()
