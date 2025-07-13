@@ -14,4 +14,4 @@ COPY ./buildScript.sh /opt/buildScript.sh
 
 RUN chmod +x /opt/buildScript.sh
 
-CMD ["/opt/buildScript.sh", "-DORPHEUS_PICO=${orpheus_pico}"]
+CMD ["/opt/buildScript.sh", "-DORPHEUS_PICO=ON"]
