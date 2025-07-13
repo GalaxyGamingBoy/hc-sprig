@@ -29,8 +29,7 @@
       "generator": "Unix Makefiles",
       "binaryDir": "${sourceDir}/rpi_build/",
       "cacheVariables": {
-        "SPADE_TARGET": "rpi",
-		"ORPHEUS_PICO": "ON"
+        "SPADE_TARGET": "orpheus_pico"
       },
       "environment": {
         "PICO_SDK_PATH": "~/raspberrypi/pico-sdk",
