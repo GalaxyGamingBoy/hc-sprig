@@ -13,4 +13,4 @@ COPY ./buildScript.sh /opt/buildScript.sh
 
 RUN chmod +x /opt/buildScript.sh
 
-CMD ["/opt/buildScript.sh", "rpi"]
+CMD ["/opt/buildScript.sh", "orpheus_pico"]
