@@ -1,6 +1,5 @@
 FROM alpine:3.19
 
-ENV orpheus_pico OFF
 
 RUN apk add git python3 clang make cmake entr uglify-js gcc-arm-none-eabi g++-arm-none-eabi gdb-multiarch gcc linux-headers
 
@@ -14,4 +13,4 @@ COPY ./buildScript.sh /opt/buildScript.sh
 
 RUN chmod +x /opt/buildScript.sh
 
-CMD ["/opt/buildScript.sh", "-DORPHEUS_PICO=ON"]
+CMD ["/opt/buildScript.sh", "rpi"]
