@@ -22,6 +22,20 @@
         "PICO_SDK_PATH": "~/raspberrypi/pico-sdk",
         "PICO_EXTRAS_PATH": "~/raspberrypi/pico-extras"
       }
+    },
+    {
+      "name": "orpheus_pico",
+      "displayName": "Orpheus Pico Build",
+      "generator": "Unix Makefiles",
+      "binaryDir": "${sourceDir}/rpi_build/",
+      "cacheVariables": {
+        "SPADE_TARGET": "rpi",
+		"ORPHEUS_PICO": "ON"
+      },
+      "environment": {
+        "PICO_SDK_PATH": "~/raspberrypi/pico-sdk",
+        "PICO_EXTRAS_PATH": "~/raspberrypi/pico-extras"
+      }
     }
   ],
   "buildPresets": [
