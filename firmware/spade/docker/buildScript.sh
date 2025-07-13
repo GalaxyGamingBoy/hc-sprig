@@ -12,8 +12,8 @@ mkdir -p src/build
 mkdir -p src/shared/sprig_engine/build
 ./tools/cstringify.py ./src/shared/sprig_engine/engine.js > ./src/shared/sprig_engine/build/engine.min.js.cstring
 
-cmake --preset=rpi
-cmake --build --preset=rpi
+cmake --preset=rpi $1
+cmake --build --preset=rpi $1
 
 cp rpi_build/src/spade.uf2 ~/firmware.uf2
 cp ~/firmware.uf2 firmware.uf2
