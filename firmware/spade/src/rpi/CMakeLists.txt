@@ -1,3 +1,8 @@
+option(ORPHEUS_PICO "Enable Orpheus Pico build" OFF)
+if (ORPHEUS_PICO)
+	set(PICO_BOARD orpheus_pico)
+endif()
+
 pico_sdk_init()
 add_definitions(-DSPADE_EMBEDDED -DSPADE_AUDIO)
 set(DCMAKE_BUILD_TYPE Release)
