@@ -1,6 +1,6 @@
 #include "pico/stdlib.h"
 #include "hardware/timer.h"
-#include "hardware/clocks.h
+#include "hardware/clocks.h"
 #include "hardware/watchdog.h"
 #include "pico/util/queue.h"
 #include "pico/multicore.h"
