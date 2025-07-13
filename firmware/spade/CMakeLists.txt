@@ -10,6 +10,7 @@ endif()
 # has to be before project() because it makes rpi asm
 # compilation work, and project() has to be top level
 if (SPADE_TARGET STREQUAL "rpi")
+  set(PICO_BOARD pico)
   include(src/rpi/pico_sdk_import.cmake)
   include(src/rpi/pico_extras_import.cmake)
 endif()
